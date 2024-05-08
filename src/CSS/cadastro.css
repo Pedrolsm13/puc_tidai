@@ -5,33 +5,25 @@ body {
     height: 100vh;
     background-color: #f5f5f5;
 }
-.login-container {
-    display: flex;
+.registration-container {
     background-color: #f0f0f0;
     border-radius: 10px;
+    padding: 20px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    width: 600px;
-    overflow: hidden;
+    width: 450px;
 }
-.welcome-section {
+.registration-header {
     background-color: #d3d3d3;
     padding: 20px;
-    width: 50%;
+    border-radius: 8px;
+    font-size: 1.25em;
+    color: #333;
     text-align: center;
+    margin-bottom: 20px;
 }
-.form-section {
-    padding: 20px;
-    width: 50%;
-}
-.form-control, .btn-primary, .form-select {
-    margin-bottom: 10px;
+.form-control {
+    margin-bottom: 15px;
 }
 .btn-primary {
     width: 100%;
-}
-
-.botaocadastro{
-    font-style: none !important;
-    text-decoration: none;
-    color: white !important;
 }
