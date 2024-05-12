@@ -1,37 +1,33 @@
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f5f5f5;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
 }
-.login-container {
-    display: flex;
-    background-color: #f0f0f0;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    width: 600px;
-    overflow: hidden;
-}
-.welcome-section {
-    background-color: #d3d3d3;
-    padding: 20px;
-    width: 50%;
+.header {
+    background-color: #ffffff; /* Dark blue */
+    color: #000;
+    padding: 30px 0;
     text-align: center;
+    border-bottom: 5px solid #ffc107; /* Bootstrap yellow */
 }
-.form-section {
+.content {
+    padding: 40px 15px;
+}
+.section {
+    background-color: #ffffff;
     padding: 20px;
-    width: 50%;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
 }
-.form-control, .btn-primary, .form-select {
-    margin-bottom: 10px;
+.icon {
+    color: #0056b3;
+    margin-right: 10px;
 }
-.btn-primary {
-    width: 100%;
-}
-
-.botaocadastro{
-    font-style: none !important;
-    text-decoration: none;
-    color: white !important;
+.footer {
+    background-color: #333;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
 }
