@@ -1,0 +1,19 @@
+body {
+    background-color: #f5f5f5;
+  }
+
+  .container {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 60vh;
+  }
+
+  .btn-dark {
+    background-color: #343a40;
+    border-color: #343a40;
+  }
+
+  .btn-dark .fas {
+    margin-right: 10px;
+  }
