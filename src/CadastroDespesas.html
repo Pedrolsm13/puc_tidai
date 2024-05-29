@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Despesas</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/cadaasroDespesas.css"> <!-- Adicionando o CSS -->
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <nav id="sidebar" class="col-md-3 col-lg-2 bg-dark">
+                <div class="sidebar-header text-center py-4">
+                    <a href="menu.html"><img src="IMG/logo.png" width="100" height="100" class="d-inline-block align-top" alt=""></a>
+                </div>
+                <ul class="list-unstyled components">
+                    <li>
+                        <a href="#">AGENDA DE COMPROMISSOS</a>
+                    </li>
+                    <li>
+                        <a href="#">CADASTRO DE DESPESAS</a>
+                    </li>
+                    <li>
+                        <a href="#">HISTÓRICO</a>
+                    </li>
+                </ul>
+            </nav>
+            <main class="col-md-9 col-lg-10">
+                <div class="container mt-5">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3>Cadastro de despesas</h3>
+                                </div>
+                                <div class="card-body">
+                                    <form id="despesaForm">
+                                        <div class="form-group">
+                                            <label for="justificativo">Tem justificativo?</label>
+                                            <select id="justificativo" class="form-control">
+                                                <option>Selecione a resposta</option>
+                                                <option>Sim</option>
+                                                <option>Não</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <label for="valor">Valor</label>
+                                                <input type="number" class="form-control" id="valor" placeholder="Valor">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label for="numeroDocumento">Número do documento</label>
+                                                <input type="text" class="form-control" id="numeroDocumento" placeholder="Número do documento">
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <label for="data">Data</label>
+                                                <input type="date" class="form-control" id="data">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label for="descricao">Descrição</label>
+                                                <input type="text" class="form-control" id="descricao" placeholder="Descrição">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="historico">Histórico</label>
+                                            <input type="text" class="form-control" id="historico" placeholder="Histórico">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="justificativa">Justificativa</label>
+                                            <textarea class="form-control" id="justificativa" rows="3" placeholder="Justificativa"></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="arquivo">Anexar Arquivo</label>
+                                            <input type="file" class="form-control-file" id="arquivo">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Enviar Despesa</button>
+                                    </form>
+                                    <button id="downloadJson" class="btn btn-secondary mt-3">Baixar Despesas</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script>
+        const form = document.getElementById('despesaForm');
+        const downloadBtn = document.getElementById('downloadJson');
+        let despesas = [];
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const despesa = {
+                justificativo: document.getElementById('justificativo').value,
+                valor: document.getElementById('valor').value,
+                numeroDocumento: document.getElementById('numeroDocumento').value,
+                data: document.getElementById('data').value,
+                descricao: document.getElementById('descricao').value,
+                historico: document.getElementById('historico').value,
+                justificativa: document.getElementById('justificativa').value,
+                arquivo: document.getElementById('arquivo').files[0] ? document.getElementById('arquivo').files[0].name : ''
+            };
+
+            despesas.push(despesa);
+            alert('Despesa salva com sucesso!');
+            form.reset();
+        });
+
+        downloadBtn.addEventListener('click', function() {
+            const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(despesas, null, 2));
+            const downloadAnchorNode = document.createElement('a');
+            downloadAnchorNode.setAttribute("href", dataStr);
+            downloadAnchorNode.setAttribute("download", "despesas.json");
+            document.body.appendChild(downloadAnchorNode);
+            downloadAnchorNode.click();
+            downloadAnchorNode.remove();
+        });
+    </script>
+</body>
+</html>
