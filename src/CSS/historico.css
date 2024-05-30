@@ -2,7 +2,9 @@ body {
     background-color: #f8f9fa;
 }
 
-
+#sidebar {
+    height: 100vh;
+}
 
 #sidebar .sidebar-header {
     background-color: #343a40;
@@ -38,12 +40,11 @@ body {
     background-color: #e9ecef;
 }
 
-.btn-primary {
-    background-color: #343a40;
-    border-color: #343a40;
+.list-group-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
 }
 
-.btn-primary:hover {
-    background-color: #495057;
-    border-color: #495057;
+.list-group-item .badge {
+    font-size: 0.9em;
 }

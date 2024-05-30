@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histórico de Despesas</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/historico.css"> <!-- Adicionando o CSS -->
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <nav id="sidebar" class="col-md-3 col-lg-2 bg-dark">
+                <div class="sidebar-header text-center py-4">
+                    <a href="menu.html"><img src="IMG/logo.png" width="100" height="100" class="d-inline-block align-top" alt=""></a>
+                </div>
+                <ul class="list-unstyled components">
+                    <li>
+                        <a href="agenda.html">AGENDA DE COMPROMISSOS</a>
+                    </li>
+                    <li>
+                        <a href="cadastroDespesas.html">CADASTRO DE DESPESAS</a>
+                    </li>
+                    <li>
+                        <a href="historico.html">HISTÓRICO</a>
+                    </li>
+                </ul>
+            </nav>
+            <main class="col-md-9 col-lg-10">
+                <div class="container mt-5">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3>Outubro 2023</h3>
+                                </div>
+                                <div class="card-body">
+                                    <ul class="list-group" id="despesasList">
+                                        <!-- Despesas serão carregadas aqui -->
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const despesasList = document.getElementById('despesasList');
+            fetch('despesas.json')
+                .then(response => response.json())
+                .then(despesas => {
+                    despesas.forEach(despesa => {
+                        const listItem = document.createElement('li');
+                        listItem.classList.add('list-group-item', 'd-flex', 'justify-content-between', 'align-items-center');
+                        listItem.innerHTML = `
+                            <div>
+                                <strong>${despesa.data}</strong> - ${despesa.historico}<br>
+                                <small>${despesa.descricao}</small>
+                            </div>
+                            <div>
+                                <span class="badge badge-primary badge-pill">${despesa.valor}</span>
+                                <span class="badge badge-secondary badge-pill">${despesa.status}</span>
+                            </div>
+                        `;
+                        despesasList.appendChild(listItem);
+                    });
+                })
+                .catch(error => console.error('Erro ao carregar despesas:', error));
+        });
+    </script>
+</body>
+</html>
