@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitações de Cadastro</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/solicitacoes.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <nav id="sidebar" class="col-md-3 col-lg-2 bg-dark">
+                <div class="sidebar-header text-center py-4">
+                    <div class="bg-light rounded-circle mx-auto" style="width: 50px; height: 50px;">
+                        <span class="h3">A</span>
+                    </div>
+                </div>
+                <ul class="list-unstyled components">
+                    <li>
+                        <a href="#">SOLICITAÇÕES DE CADASTRO</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <main class="col-md-9 col-lg-10 ml-sm-auto px-4">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <div class="btn-toolbar mb-2 mb-md-0">
+                        <div class="btn-group mr-2">
+                            <button class="btn btn-sm btn-outline-secondary" id="prevMonth">&lt;</button>
+                        </div>
+                    </div>
+                    <h1 class="h2" id="monthYear">OUTUBRO 2023</h1>
+                    <div class="btn-toolbar mb-2 mb-md-0">
+                        <div class="btn-group mr-2">
+                            <button class="btn btn-sm btn-outline-secondary" id="nextMonth">&gt;</button>
+                        </div>
+                        <button class="btn btn-sm btn-secondary">+</button>
+                    </div>
+                </div>
+                <div id="requestList">
+                    <div class="request-day">
+                        <h5>Quinta, 19 Out</h5>
+                        <div class="request-item">
+                            <span><i class="fa fa-user"></i> 18:00 Ciclano Neves Ferreira</span>
+                            <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-eye"></i></button>
+                            <button class="btn btn-sm btn-danger">Reprovar</button>
+                            <button class="btn btn-sm btn-success">Aprovar</button>
+                        </div>
+                    </div>
+                    <div class="request-day">
+                        <h5>Sex, 20 Out</h5>
+                        <div class="request-item">
+                            <span><i class="fa fa-user"></i> 13:00 Aderbaldo Santos da Silva</span>
+                            <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-eye"></i></button>
+                            <button class="btn btn-sm btn-danger">Reprovar</button>
+                            <button class="btn btn-sm btn-success">Aprovar</button>
+                        </div>
+                    </div>
+                    <div class="request-day">
+                        <h5>Sáb, 28 Out</h5>
+                        <div class="request-item">
+                            <span><i class="fa fa-user"></i> 14:00 Diógenes Siqueira Alves</span>
+                            <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-eye"></i></button>
+                            <button class="btn btn-sm btn-danger">Reprovar</button>
+                            <button class="btn btn-sm btn-success">Aprovar</button>
+                        </div>
+                    </div>
+                    <div class="request-day">
+                        <h5>Dom, 29 Out</h5>
+                        <div class="request-item">
+                            <span><i class="fa fa-user"></i> 11:00 Marietta Drummond Carvalho</span>
+                            <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-eye"></i></button>
+                            <button class="btn btn-sm btn-danger">Reprovar</button>
+                            <button class="btn btn-sm btn-success">Aprovar</button>
+                        </div>
+                        <div class="request-item">
+                            <span><i class="fa fa-user"></i> 20:00 Júlio Moreira Perdigão</span>
+                            <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-eye"></i></button>
+                            <button class="btn btn-sm btn-danger">Reprovar</button>
+                            <button class="btn btn-sm btn-success">Aprovar</button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <script src="JS/solicitacoes.js"></script>
+</body>
+</html>

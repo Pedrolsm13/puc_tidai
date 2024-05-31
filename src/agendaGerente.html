@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcionários</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/agendaGerente.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <nav id="sidebar" class="col-md-3 col-lg-2 bg-dark">
+                <div class="sidebar-header text-center py-4">
+                    <div class="bg-light rounded-circle mx-auto" style="width: 50px; height: 50px;">
+                        <span class="h3">G</span>
+                    </div>
+                </div>
+                <ul class="list-unstyled components">
+                    <li>
+                        <a href="#">SOLICITAÇÕES DE REEMBOLSO</a>
+                    </li>
+                    <li>
+                        <a href="#">RELATÓRIOS DE DESPESAS</a>
+                    </li>
+                    <li>
+                        <a href="#">AGENDAS DE COMPROMISSOS</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <main class="col-md-9 col-lg-10 ml-sm-auto px-4">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">FUNCIONÁRIOS</h1>
+                    <button class="btn btn-sm btn-secondary">+</button>
+                </div>
+                <div class="employee-list">
+                    <div class="employee-item">
+                        <div class="employee-info">
+                            <img src="https://via.placeholder.com/50" alt="Foto do Funcionário" class="employee-photo">
+                            <div class="employee-details">
+                                <h5>Nome: Carlos Nóbrega</h5>
+                                <p>Idade: 29 Anos</p>
+                                <p>Função: Prestador de Serviços</p>
+                            </div>
+                        </div>
+                        <div class="employee-actions">
+                            <button class="btn btn-sm btn-outline-secondary">Visualizar Compromissos</button>
+                            <button class="btn btn-sm btn-outline-secondary">Adicionar Compromisso</button>
+                        </div>
+                    </div>
+                    <div class="employee-item">
+                        <div class="employee-info">
+                            <img src="https://via.placeholder.com/50" alt="Foto do Funcionário" class="employee-photo">
+                            <div class="employee-details">
+                                <h5>Nome: Eduardo Menezes</h5>
+                                <p>Idade: 23 Anos</p>
+                                <p>Função: Prestador de Serviços</p>
+                            </div>
+                        </div>
+                        <div class="employee-actions">
+                            <button class="btn btn-sm btn-outline-secondary">Visualizar Compromissos</button>
+                            <button class="btn btn-sm btn-outline-secondary">Adicionar Compromisso</button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="JS/agendaGerente.js"></script>
+</body>
+</html>
