@@ -19,7 +19,7 @@
                         <a href="#">AGENDA DE COMPROMISSOS</a>
                     </li>
                     <li>
-                        <a href="#">CADASTRO DE DESPESAS</a>
+                        <a href="#">CADASTRO DE COMPROMISSO</a>
                     </li>
                     <li>
                         <a href="#">HISTÓRICO</a>
@@ -39,8 +39,8 @@
                         <div class="btn-group mr-2">
                             <button class="btn btn-sm btn-outline-secondary" id="nextMonth">&gt;</button>
                         </div>
-                        <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#addExpenseModal">Adicionar despesas</button>
-                        <button class="btn btn-sm btn-info" id="toggleListView">Lista de Despesas</button>
+                        <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#addExpenseModal">Adicionar compromisso</button>
+                        <button class="btn btn-sm btn-info" id="toggleListView">Lista de Compromisso</button>
                     </div>
                 </div>
                 <div class="calendar-view">
@@ -65,7 +65,7 @@
                 </div>
                 <div class="list-view d-none">
                     <ul id="expenseList" class="list-group">
-                        <!-- Lista de despesas será preenchida dinamicamente -->
+                        <!-- Lista de compromiso será preenchida dinamicamente -->
                     </ul>
                 </div>
             </main>
@@ -77,7 +77,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="addExpenseModalLabel">Adicionar Despesa</h5>
+                    <h5 class="modal-title" id="addExpenseModalLabel">Adicionar compromisso</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -92,11 +92,7 @@
                             <label for="expenseTitle">Título</label>
                             <input type="text" class="form-control" id="expenseTitle" required>
                         </div>
-                        <div class="form-group">
-                            <label for="expenseAmount">Valor</label>
-                            <input type="number" class="form-control" id="expenseAmount" required>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Adicionar</button>
+                        <button id="adicionar_comproisso" type="submit" class="btn btn-primary">Adicionar</button>
                     </form>
                 </div>
             </div>
@@ -108,7 +104,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="editExpenseModalLabel">Editar Despesa</h5>
+                    <h5 class="modal-title" id="editExpenseModalLabel">Editar Compromisso</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -122,10 +118,6 @@
                         <div class="form-group">
                             <label for="editExpenseTitle">Título</label>
                             <input type="text" class="form-control" id="editExpenseTitle" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="editExpenseAmount">Valor</label>
-                            <input type="number" class="form-control" id="editExpenseAmount" required>
                         </div>
                         <input type="hidden" id="originalExpenseDate">
                         <input type="hidden" id="originalExpenseCard">
