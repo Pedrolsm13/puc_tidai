@@ -1,0 +1,53 @@
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+#sidebar {
+    height: 100vh;
+}
+
+#sidebar .sidebar-header {
+    background-color: #343a40;
+    color: white;
+}
+
+#sidebar .components {
+    padding-left: 0;
+}
+
+#sidebar .components li {
+    padding: 10px 15px;
+}
+
+#sidebar .components li a {
+    color: white;
+    text-decoration: none;
+}
+
+#sidebar .components li a:hover {
+    background-color: #495057;
+    color: white;
+}
+
+.request-day {
+    margin-bottom: 20px;
+}
+
+.request-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 5px;
+    background-color: #f8f9fa;
+}
+
+.request-item span {
+    flex-grow: 1;
+}
+
+.request-item button {
+    margin-left: 10px;
+}

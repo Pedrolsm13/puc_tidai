@@ -1,0 +1,50 @@
+body {
+    background-color: #f8f9fa;
+}
+
+#sidebar {
+    height: 100vh;
+}
+
+#sidebar .sidebar-header {
+    background-color: #343a40;
+    color: #fff;
+}
+
+#sidebar .components {
+    padding: 20px 0;
+}
+
+#sidebar .components li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+    color: #d1d1d1;
+}
+
+#sidebar .components li a:hover {
+    color: #fff;
+    background: #495057;
+}
+
+.card {
+    margin-top: 20px;
+}
+
+.card-header {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+.card-body {
+    background-color: #e9ecef;
+}
+
+.list-group-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+.list-group-item .badge {
+    font-size: 0.9em;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Despesas</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/reembolso.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <nav id="sidebar" class="col-md-3 col-lg-2 bg-dark">
+                <div class="sidebar-header text-center py-4">
+                    <div class="bg-light rounded-circle mx-auto" style="width: 50px; height: 50px;">
+                        <span class="h3">G</span>
+                    </div>
+                </div>
+                <ul class="list-unstyled components">
+                    <li>
+                        <a href="#">SOLICITAÇÕES DE REEMBOLSO</a>
+                    </li>
+                    <li>
+                        <a href="#">RELATÓRIOS DE DESPESAS</a>
+                    </li>
+                    <li>
+                        <a href="#">AGENDAS DE COMPROMISSOS</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <main class="col-md-9 col-lg-10 ml-sm-auto px-4">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <div class="btn-toolbar mb-2 mb-md-0">
+                        <div class="btn-group mr-2">
+                            <button class="btn btn-sm btn-outline-secondary" id="prevMonth">&lt;</button>
+                        </div>
+                    </div>
+                    <h1 class="h2" id="monthYear">OUTUBRO 2023</h1>
+                    <div class="btn-toolbar mb-2 mb-md-0">
+                        <div class="btn-group mr-2">
+                            <button class="btn btn-sm btn-outline-secondary" id="nextMonth">&gt;</button>
+                        </div>
+                        <button class="btn btn-sm btn-secondary">+</button>
+                    </div>
+                </div>
+                <div id="eventList">
+                    <div class="event-day">
+                        <h5>Sáb, 21 Out</h5>
+                        <div class="event-item">
+                            <span>15:00 Reembolso X</span>
+                            <button class="btn btn-sm btn-danger">Reprovar</button>
+                            <button class="btn btn-sm btn-success">Aprovar</button>
+                        </div>
+                    </div>
+                    <div class="event-day">
+                        <h5>Dom, 22 Out</h5>
+                        <div class="event-item">
+                            <span>13:00 Reembolso Y</span>
+                            <button class="btn btn-sm btn-danger">Reprovar</button>
+                            <button class="btn btn-sm btn-success">Aprovar</button>
+                        </div>
+                    </div>
+                    <div class="event-day">
+                        <h5>Sáb, 28 Out</h5>
+                        <div class="event-item">
+                            <span>15:00 Reembolso Z</span>
+                            <button class="btn btn-sm btn-danger">Reprovar</button>
+                            <button class="btn btn-sm btn-success">Aprovar</button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="JS/reembolso.js"></script>
+</body>
+</html>
