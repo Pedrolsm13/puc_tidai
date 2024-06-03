@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Despesas</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="CSS/cadaasroDespesas.css"> <!-- Adicionando o CSS -->
+    <link rel="stylesheet" href="CSS/cadastroDespesas.css"> <!-- Adicionando o CSS -->
 </head>
 <body>
     <div class="container-fluid">
@@ -75,8 +75,8 @@
                                             <input type="text" class="form-control" id="historico" placeholder="Histórico">
                                         </div>
                                         <div class="form-group">
-                                            <label for="justificativa">Comentários</label>
-                                            <textarea class="form-control" id="justificativa" rows="3" placeholder="Comentários"></textarea>
+                                            <label for="comentarios">Comentários</label>
+                                            <textarea class="form-control" id="comentarios" rows="3" placeholder="Comentários"></textarea>
                                         </div>
                                         <div class="form-group">
                                             <label for="arquivo">Anexar Arquivo</label>
@@ -94,42 +94,8 @@
         </div>
     </div>
 
-
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <script>
-        const form = document.getElementById('despesaForm');
-        const downloadBtn = document.getElementById('downloadJson');
-        let despesas = [];
-
-        form.addEventListener('submit', function(event) {
-            event.preventDefault();
-
-            const despesa = {
-                justificativa: document.getElementById('justificativa').value,
-                valor: document.getElementById('valor').value,
-                numeroDocumento: document.getElementById('numeroDocumento').value,
-                data: document.getElementById('data').value,
-                descricao: document.getElementById('descricao').value,
-                historico: document.getElementById('historico').value,
-                justificativa: document.getElementById('justificativa').value,
-                arquivo: document.getElementById('arquivo').files[0] ? document.getElementById('arquivo').files[0].name : ''
-            };
-
-            despesas.push(despesa);
-            alert('Despesa salva com sucesso!');
-            form.reset();
-        });
-
-        downloadBtn.addEventListener('click', function() {
-            const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(despesas, null, 2));
-            const downloadAnchorNode = document.createElement('a');
-            downloadAnchorNode.setAttribute("href", dataStr);
-            downloadAnchorNode.setAttribute("download", "despesas.json");
-            document.body.appendChild(downloadAnchorNode);
-            downloadAnchorNode.click();
-            downloadAnchorNode.remove();
-        });
-    </script>
+    <script src="JS/cadastroDespesas.js"></script> <!-- Adicionando o arquivo JS -->
 </body>
 </html>

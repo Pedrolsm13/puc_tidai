@@ -48,30 +48,6 @@
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const despesasList = document.getElementById('despesasList');
-            fetch('despesas.json')
-                .then(response => response.json())
-                .then(despesas => {
-                    despesas.forEach(despesa => {
-                        const listItem = document.createElement('li');
-                        listItem.classList.add('list-group-item', 'd-flex', 'justify-content-between', 'align-items-center');
-                        listItem.innerHTML = `
-                            <div>
-                                <strong>${despesa.data}</strong> - ${despesa.historico}<br>
-                                <small>${despesa.descricao}</small>
-                            </div>
-                            <div>
-                                <span class="badge badge-primary badge-pill">${despesa.valor}</span>
-                                <span class="badge badge-secondary badge-pill">${despesa.status}</span>
-                            </div>
-                        `;
-                        despesasList.appendChild(listItem);
-                    });
-                })
-                .catch(error => console.error('Erro ao carregar despesas:', error));
-        });
-    </script>
+    <script src="JS/historico.js"></script> <!-- Adicionando o arquivo JS -->
 </body>
 </html>
