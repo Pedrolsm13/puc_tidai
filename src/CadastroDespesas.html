@@ -59,10 +59,16 @@
                                                 <label for="data">Data</label>
                                                 <input type="date" class="form-control" id="data">
                                             </div>
-                                            <div class="form-group col-md-6">
-                                                <label for="descricao">Descrição</label>
-                                                <input type="text" class="form-control" id="descricao" placeholder="Descrição">
-                                            </div>
+                                            <div class="form-group">
+                                                <label for="justificativo">Tipo</label>
+                                                <select id="justificativo" class="form-control">
+                                                    <option></option>
+                                                    <option>Transporte</option>
+                                                    <option>Alimentação</option>
+                                                    <option>Hospedagem</option>
+                                                    <option>Outros</option>
+                                                </select>
+                                            </div> 
                                         </div>
                                         <div class="form-group">
                                             <label for="historico">Histórico</label>
@@ -87,6 +93,7 @@
             </main>
         </div>
     </div>
+
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
