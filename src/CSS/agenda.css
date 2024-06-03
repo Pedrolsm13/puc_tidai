@@ -62,3 +62,7 @@ body {
 .list-view {
   margin-top: 20px;
 }
+
+.botaolista{
+  display: none;
+}
