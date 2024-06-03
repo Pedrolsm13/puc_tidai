@@ -37,8 +37,8 @@
                                 <div class="card-body">
                                     <form id="despesaForm">
                                         <div class="form-group">
-                                            <label for="justificativo">Tem justificativo?</label>
-                                            <select id="justificativo" class="form-control">
+                                            <label for="justificativa">Tem justificativa?</label>
+                                            <select id="justificativa" class="form-control">
                                                 <option>Selecione a resposta</option>
                                                 <option>Sim</option>
                                                 <option>Não</option>
@@ -99,7 +99,7 @@
             event.preventDefault();
 
             const despesa = {
-                justificativo: document.getElementById('justificativo').value,
+                justificativa: document.getElementById('justificativa').value,
                 valor: document.getElementById('valor').value,
                 numeroDocumento: document.getElementById('numeroDocumento').value,
                 data: document.getElementById('data').value,
